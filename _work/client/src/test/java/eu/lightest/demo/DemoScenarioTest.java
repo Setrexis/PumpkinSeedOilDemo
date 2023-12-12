@@ -39,8 +39,8 @@ public class DemoScenarioTest {
     @Test
     public void scenario3() {
         String prefix = "../../scenario3/";
-        String policy = "policy3_pof_withTranslation_withPades.tpl";
-        String container = "order_signed_backup.pdf";
+        String policy = "policy3_pdf.tpl";
+        String container = "order_signed_backup.pdf";//order_pdf_signed.pdf";
         
         verify(prefix, container, policy);
     }

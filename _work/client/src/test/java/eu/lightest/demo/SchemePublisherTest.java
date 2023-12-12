@@ -10,7 +10,7 @@ import static org.junit.Assert.assertTrue;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class SchemePublisherTest {
     
-    private static final String TSPA = "https://tspa.tug.do.nlnetlabs.nl/tspa/api/v1/";
+    private static final String TSPA = "http://localhost:8080/tspa/api/v1/";
     private static SchemePublisher publisher;
     
     @BeforeClass
@@ -68,7 +68,7 @@ public class SchemePublisherTest {
     public static class SCHEME_EIDAS extends SchemePublisher.SCHEME {
         
         public SCHEME_EIDAS() {
-            super("https://ec.europa.eu/information_society/policy/esignature/trusted-list/tl-mp.xml",
+            super("https://ec.europa.eu/tools/lotl/eu-lotl.xml",
                     "eidas-ca.pof-demo.lightest.nlnetlabs.nl",
                     "eidas.pof-demo.lightest.nlnetlabs.nl");
         }

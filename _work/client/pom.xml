@@ -43,6 +43,10 @@
 
     <repositories>
         <repository>
+            <id>In-Project-Repository</id>
+            <url>file://${project.basedir}/../../../AutomaticTrustVerifier/target</url>
+        </repository>
+        <repository>
             <id>gitlab-maven</id>
             <url>https://extgit.iaik.tugraz.at/api/v4/groups/341/-/packages/maven</url>
         </repository>
@@ -52,7 +56,8 @@
         <dependency>
             <groupId>eu.lightest</groupId>
             <artifactId>atv</artifactId>
-            <version>1.9.9-SNAPSHOT</version>
+            <!--<version>1.9.9-SNAPSHOT</version>-->
+            <version>1.9.6.2</version>
         </dependency>
 
         <dependency>
@@ -71,6 +76,12 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.13.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-configuration2</artifactId>
+            <version>2.6</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

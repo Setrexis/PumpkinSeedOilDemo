@@ -5,7 +5,9 @@ import com.google.gson.JsonParser;
 import eu.lightest.verifier.ATVConfiguration;
 import eu.lightest.verifier.exceptions.DNSException;
 import eu.lightest.verifier.wrapper.DNSHelper;
+import eu.lightest.verifier.wrapper.GNSHelper;
 import eu.lightest.verifier.wrapper.HTTPSHelper;
+import eu.lightest.verifier.wrapper.NameResolverHelper;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -36,7 +38,7 @@ public class DNSVerifierTest {
     private static DNSHelper dnsGOOGLE;
     private static HTTPSHelper http;
     private static JsonParser jsonParser;
-    private static DNSHelper dnsDefault;
+    private static NameResolverHelper dnsDefault;
     private static String defaultNS;
     
     @Parameterized.Parameter(0)
@@ -48,7 +50,7 @@ public class DNSVerifierTest {
     @BeforeClass
     public static void init() throws IOException {
         defaultNS = ATVConfiguration.get().getString("dns_nameserver", "NO DEFAULT FOUND");
-        dnsDefault = new DNSHelper();
+        dnsDefault = new GNSHelper();
         dnsCLOUDFLAIR = new DNSHelper(DNSHelper.DNS_CLOUDFLARE1);
         dnsGOOGLE = new DNSHelper(DNSHelper.DNS_GOOGLE1);
         http = new HTTPSHelper();
@@ -84,7 +86,7 @@ public class DNSVerifierTest {
     public void verifyDefault() throws IOException, DNSException {
         System.out.println("Using nameserver: " + defaultNS);
         
-        DNSHelper dns = dnsDefault;
+        NameResolverHelper dns = dnsDefault;
         switch(this.type) {
             case TYPE_PTR:
                 dns.queryPTR(this.hostname);
