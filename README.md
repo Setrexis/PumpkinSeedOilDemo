@@ -2,6 +2,13 @@
 
 Also known as WP3, WP4 and WP6 Cookbook demo.
 
+GNS version
+
+Requires GNS version of components (ZoneManager, ATV, TSPA, TTA).
+
+ZoneManager needs to be configured to use GNS (GNS instance needs to be running) on operation on localhost 7225.
+
+ATV needs GNS rest endpoint to be configured (GNS rest instance needs to be running on port 7776 localhost).
 
 ## Repository Overview
 
@@ -56,21 +63,21 @@ Verify Transactions received via Mail (3 different transactions showing differen
 
 ### Scenario 1
 
-* Step 1: Briefly show publication of POF Scheme (via Python Script or Java Client)
+* Step 1: Briefly show publication of POF Scheme (via Python Script or Java Client SchemePublisherTest)
 * Step 3: Show `order_pof1.xml`
 * Step 3: Show `order_pof1.asice`
 * Step 4: Show `policy0_pof.tpl` (or create using TPAT)
 * Step 5: Open ATV with `order_pof1.asice` and `policy0_pof.tpl`
 
-### Scenario 2
+### Scenario 2 (not working tr-trust-list no longer available)
 
-* Step 2: Briefly show publication of Trust Translation (via Postman)
+* Step 2: Briefly show publication of Trust Translation (via Java Client TranslationPublisherTest. Might need to switch the translation url from the tow created uri records by step two in GNS)
 * Step 3: Show `order_tr1.xml`
 * Step 3: Show `order_tr1.asice`
 * Step 4: Show `policy2_pof_withTranslation.tpl`
 * Step 5: Open ATV with `order_tr1.asice` and `policy2_pof_withTranslation.tpl`
 
-### Scenario 3
+### Scenario 3 (requires steps of Scenario 1 and 2)
 
 * Step 3: Explain eID / Handysignatur
 * Step 3: Show `order.pdf`
@@ -79,7 +86,7 @@ Verify Transactions received via Mail (3 different transactions showing differen
 * Step 5: Open ATV with `order_signed.pdf` and `policy3_pof_withTranslation_withPades.tpl`
 
 
-## Video Recordings
+## Video Recordings (do not exist anymore)
 
 Only the following steps require Internet connection:
 

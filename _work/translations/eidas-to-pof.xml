@@ -1,0 +1,18 @@
+{
+  "agreement": {
+    "name": "eidas-to-pof",
+    "status": "active",
+    "creation-date": "2019-08-10",
+    "leaving-date": "2020-08-10",
+    "activation-date": "2019-08-10",
+    "source": {
+      "name": "eidas.pof-demo.lightest.nlnetlabs.nl",
+      "level": "high",
+      "provider": "eu"
+    },
+    "target": {
+      "name": "federation.pof-demo.lightest.nlnetlabs.nl",
+      "provider": "pof"
+    }
+  }
+}
