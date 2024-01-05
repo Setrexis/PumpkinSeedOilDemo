@@ -6,7 +6,7 @@ GNS version
 
 Requires GNS version of components (ZoneManager, ATV, TSPA, TTA).
 
-ZoneManager needs to be configured to use GNS (GNS instance needs to be running) on operation on localhost 7225.
+ZoneManager needs to be configured to use GNS (GNS instance needs to be running) on localhost 7225.
 
 ATV needs GNS rest endpoint to be configured (GNS rest instance needs to be running on port 7776 localhost).
 
@@ -81,7 +81,7 @@ Verify Transactions received via Mail (3 different transactions showing differen
 
 * Step 3: Explain eID / Handysignatur
 * Step 3: Show `order.pdf`
-* Step 3: Use [PDF-Over](https://technology.a-sit.at/en/pdf-over/) or [A-Trust](https://www.handy-signatur.at/hs2/#!sign/single) to sign `order.pdf`
+* Step 3: Use [PDF-Over](https://technology.a-sit.at/en/pdf-over/) or [A-Trust](https://www.handy-signatur.at/hs2/#!sign/single) to sign `order.pdf` (Example file already present)
 * Step 4: Show `policy3_pof_withTranslation_withPades.tpl`
 * Step 5: Open ATV with `order_signed.pdf` and `policy3_pof_withTranslation_withPades.tpl`
 
